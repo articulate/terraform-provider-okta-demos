@@ -48,6 +48,9 @@ Anything exposed by Okta's APIs _can_ be configured with Okta. There are two cav
 
 ```sh
 docker-compose run terraform init
-docker-compose run terraform plan -var-file=example.tfvars
+docker-compose run terraform plan -out=demo.tfplan -var-file=example.tfvars
+docker-compose run terraform apply demo.tfplan
 
+// Caution this will destroy your entire env!
+docker-compose run terraform destroy -var-file=example.tfvars
 ```

@@ -1,3 +1,10 @@
+# CI/CD Vars
+env = "dev"
+
+# Feature contingent flags, uncomment to enable features
+# enable_group_rule = true
+
+# Mocked input for SSO feature
 issuer = "https://example.com/test"
 sso_url = "https://example.com"
 signing_certificate = <<EOF
