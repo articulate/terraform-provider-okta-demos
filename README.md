@@ -43,3 +43,11 @@ Anything exposed by Okta's APIs _can_ be configured with Okta. There are two cav
 * API integrations on preconfigured applications, such as AWS SAML App.
 * SAML Roles on AWS SAML App
 * Hooking up inline token hooks (they can be created and managed but not flipped on)
+
+## Demos
+
+```sh
+docker-compose run terraform init
+docker-compose run terraform plan -var-file=example.tfvars
+
+```

@@ -1,4 +1,4 @@
-resource okta_oauth_app my_app {
+resource okta_app_oauth my_app {
   label = "My App"
   type  = "web"
 
