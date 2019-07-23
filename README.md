@@ -61,7 +61,7 @@ docker-compose run terraform plan -out=demo.tfplan -var-file=example.tfvars
 * Apply the plan. This will actual hit Okta APIs and create your resources.
 
 ```sh
-docker-compose run terraform apply demo.tfplan
+docker-compose run terraform apply "demo.tfplan"
 ```
 
 * When you are all done, you can destroy everything we worked so hard to create! Careful!
