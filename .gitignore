@@ -8,5 +8,6 @@ docker-compose.override.yml
 terraform/.terraform
 terraform/*.tfstate
 terraform/*.tfstate.*
+terraform/*.tfplan
 .terraform.d/
 crash.log

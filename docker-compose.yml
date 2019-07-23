@@ -1,0 +1,8 @@
+version: '3'
+services:
+  terraform:
+    build: ./terraform
+    working_dir: /terraform
+    env_file: .env
+    volumes:
+      - "./terraform:/terraform"
