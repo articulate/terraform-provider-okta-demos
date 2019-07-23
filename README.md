@@ -58,7 +58,7 @@ docker-compose run terraform init
 docker-compose run terraform plan -out=demo.tfplan -var-file=example.tfvars
 ```
 
-* Apply the plan. This will actual hit Okta APIs and create your resources.
+* Apply the plan. This will actual hit Okta APIs and create your resources. Note, the state file is output to `terraform/terraform.tfstate`.
 
 ```sh
 docker-compose run terraform apply "demo.tfplan"

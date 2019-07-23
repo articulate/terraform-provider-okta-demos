@@ -1,3 +1,6 @@
+variable domain {
+  deafult = "example.com"
+}
 variable enable_group_rule {
   default = false
 }

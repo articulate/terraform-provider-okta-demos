@@ -5,8 +5,8 @@ env = "dev"
 # enable_group_rule = true
 
 # Mocked input for SSO feature
-issuer = "https://example.com/test"
-sso_url = "https://example.com"
+issuer = "https://customer.example.com/test"
+sso_url = "https://customer.example.com"
 signing_certificate = <<EOF
 -----BEGIN CERTIFICATE-----
 MIICWDCCAcGgAwIBAgIBADANBgkqhkiG9w0BAQ0FADBJMQswCQYDVQQGEwJ1czES

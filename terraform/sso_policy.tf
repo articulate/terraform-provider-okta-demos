@@ -13,6 +13,6 @@ resource okta_policy_rule_idp_discovery discovery {
 
   user_identifier_patterns {
     match_type = "SUFFIX"
-    value      = "example.com"
+    value      = "${var.domain}"
   }
 }

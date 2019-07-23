@@ -18,5 +18,5 @@ resource okta_group_rule staff {
   status            = "ACTIVE"
   group_assignments = ["${okta_group.staff.id}"]
   expression_type   = "urn:okta:expression:1.0"
-  expression_value  = "String.substringAfter(user.login, \"@\") == \"example.com\""
+  expression_value  = "String.substringAfter(user.login, \"@\") == \"${var.domain}\""
 }
