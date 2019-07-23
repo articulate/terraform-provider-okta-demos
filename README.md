@@ -46,11 +46,26 @@ Anything exposed by Okta's APIs _can_ be configured with Okta. There are two cav
 
 ## Demos
 
+* Let's start by initializing the Terraform workspace
+
 ```sh
 docker-compose run terraform init
-docker-compose run terraform plan -out=demo.tfplan -var-file=example.tfvars
-docker-compose run terraform apply demo.tfplan
+```
 
-// Caution this will destroy your entire env!
+* Run the plan. We want to input our variables and saving the plan
+
+```sh
+docker-compose run terraform plan -out=demo.tfplan -var-file=example.tfvars
+```
+
+* Apply the plan. This will actual hit Okta APIs and create your resources.
+
+```sh
+docker-compose run terraform apply demo.tfplan
+```
+
+* When you are all done, you can destroy everything we worked so hard to create! Careful!
+
+```sh
 docker-compose run terraform destroy -var-file=example.tfvars
 ```
