@@ -1,6 +1,6 @@
 # Terraform Provider Okta Demos
 
-The purpose of this repository was to create a curriculum for a conference talk I did. It, serendipitously, is a great way to introduce yourself to using Terraform to build out Okta infrastructure.
+The purpose of this repository was to create a demonstration for a conference talk I did about [Articulate's Terraform Provider for Okta](https://github.com/articulate/terraform-provider-okta). It, serendipitously, is a great way to introduce yourself to using Terraform to build out Okta infrastructure. [For more specific examples see here](https://github.com/articulate/terraform-provider-okta/tree/master/examples#configuration-examples).
 
 ## Prerequisites
 
