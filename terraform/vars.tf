@@ -1,9 +1,11 @@
 variable domain {
-  deafult = "example.com"
+  default = "example.com"
 }
+
 variable enable_group_rule {
   default = false
 }
+
 variable env {}
 variable issuer {}
 variable signing_certificate {}

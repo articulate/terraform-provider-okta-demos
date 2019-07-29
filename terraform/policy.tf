@@ -47,7 +47,7 @@ resource okta_policy_rule_password staff_pwd {
 resource okta_policy_signon signon {
   name            = "Sign On Policy"
   status          = "ACTIVE"
-  priority        = 1
+  priority        = 2
   groups_included = ["${data.okta_group.everyone.id}"]
 }
 
@@ -69,7 +69,7 @@ resource okta_policy_rule_signon signon {
 resource okta_policy_password pwd {
   name                          = "Password Policy"
   groups_included               = ["${data.okta_group.everyone.id}"]
-  priority                      = 1
+  priority                      = 2
   password_min_length           = 16
   password_min_lowercase        = 1
   password_min_uppercase        = 1

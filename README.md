@@ -1,6 +1,6 @@
 # Terraform Provider Okta Demos
 
-The purpose of this repository was to create a demonstration for a conference talk I did about [Articulate's Terraform Provider for Okta](https://github.com/articulate/terraform-provider-okta). It, serendipitously, is a great way to introduce yourself to using Terraform to build out Okta infrastructure. [For more specific examples see here](https://github.com/articulate/terraform-provider-okta/tree/master/examples#configuration-examples).
+The purpose of this repository was to create a demonstration for a conference talk I did about [Articulate's Terraform Provider for Okta](https://github.com/articulate/terraform-provider-okta). It, serendipitously, is a great way to introduce yourself to using Terraform to build out Okta infrastructure. [For more specific examples see here](https://github.com/articulate/terraform-provider-okta/tree/master/examples#configuration-examples). [You can find my slides for that here](https://docs.google.com/presentation/d/142wUTQK6fKOED72sLzZaCN-XlqqNKbd_5gcAihXClYM).
 
 ## Prerequisites
 
