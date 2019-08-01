@@ -7,3 +7,4 @@ services:
     volumes:
       - "./terraform:/terraform"
       - "~/.terraform.d:/root/.terraform.d"
+      - "~/.aws/credentials:/root/.aws/credentials"
