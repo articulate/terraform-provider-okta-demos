@@ -6,7 +6,7 @@ resource okta_auth_server_claim first_name {
   auth_server_id = "${data.okta_auth_server.default.id}"
   name           = "first_name"
   value          = "user.firstName"
-  scopes         = ["profile_name"]
+  scopes         = ["${okta_auth_server_scope.profile_name.name}"]
   claim_type     = "IDENTITY"
 }
 
@@ -14,7 +14,7 @@ resource okta_auth_server_claim last_name {
   auth_server_id = "${data.okta_auth_server.default.id}"
   name           = "last_name"
   value          = "user.lastName"
-  scopes         = ["profile_name"]
+  scopes         = ["${okta_auth_server_scope.profile_name.name}"]
   claim_type     = "IDENTITY"
 }
 

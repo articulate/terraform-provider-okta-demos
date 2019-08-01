@@ -20,7 +20,7 @@ module john_doe {
   groups      = ["${okta_group.staff.id}"]
 }
 
-resource "okta_user_schema" "bio" {
+resource okta_user_schema bio {
   index       = "bio"
   title       = "bio"
   type        = "string"

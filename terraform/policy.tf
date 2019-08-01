@@ -19,6 +19,8 @@ resource okta_policy_rule_signon staff_signon {
   session_idle        = 43200
   session_lifetime    = 43200
   session_persistent  = true
+
+  depends_on = ["okta_factor.google_otp", "okta_factor.okta_otp"]
 }
 
 resource okta_policy_password staff_pwd {
@@ -47,7 +49,6 @@ resource okta_policy_rule_password staff_pwd {
 resource okta_policy_signon signon {
   name            = "Sign On Policy"
   status          = "ACTIVE"
-  priority        = 2
   groups_included = ["${data.okta_group.everyone.id}"]
 }
 
@@ -69,7 +70,6 @@ resource okta_policy_rule_signon signon {
 resource okta_policy_password pwd {
   name                          = "Password Policy"
   groups_included               = ["${data.okta_group.everyone.id}"]
-  priority                      = 2
   password_min_length           = 16
   password_min_lowercase        = 1
   password_min_uppercase        = 1

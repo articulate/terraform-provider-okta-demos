@@ -3,7 +3,7 @@ resource okta_idp_saml_key idp {
 }
 
 resource okta_idp_saml idp {
-  name                     = "Articulate"
+  name                     = "Customer X IdP"
   acs_binding              = "HTTP-POST"
   acs_type                 = "ORG"
   sso_url                  = "${var.sso_url}"
@@ -15,4 +15,20 @@ resource okta_idp_saml idp {
   request_signature_scope  = "REQUEST"
   response_signature_scope = "ANY"
   profile_master           = false
+}
+
+resource okta_idp_social google {
+  type          = "GOOGLE"
+  protocol_type = "OAUTH2"
+  name          = "Google Auth"
+
+  scopes = [
+    "profile",
+    "email",
+    "openid",
+  ]
+
+  client_id         = "placeholder"
+  client_secret     = "placeholder"
+  username_template = "idpuser.email"
 }
