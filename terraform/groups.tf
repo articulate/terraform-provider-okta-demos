@@ -20,3 +20,8 @@ resource okta_group_rule staff {
   expression_type   = "urn:okta:expression:1.0"
   expression_value  = "String.substringAfter(user.login, \"@\") == \"${var.domain}\""
 }
+
+resource okta_group people {
+  name        = "People"
+  description = "People being people and stuff"
+}

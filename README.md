@@ -64,6 +64,39 @@ docker-compose run terraform plan -out=demo.tfplan -var-file=example.tfvars
 docker-compose run terraform apply "demo.tfplan"
 ```
 
+* Take a look at our state file
+
+```sh
+aws s3 cp s3://terraform-state-689543204258-us-east-1/terraform-provider-okta-demos/terraform.tfstate terraform/terrform.tfstate
+```
+
+* Move resources in state
+
+```sh
+# First change resource name
+docker-compose run terraform state mv okta_user.andy okta_user.andy_g
+```
+
+* Taint a resource
+
+```sh
+docker-compose run terraform taint okta_user.andy_g
+```
+
+* Remove resources from state
+
+```sh
+# Remove code block for user
+docker-compose run terraform state rm okta_user.andy_g
+```
+
+* Import a resource
+
+```sh
+docker-compose run terraform import okta_policy_signon.staff_signon <policyId>
+docker-compose run terraform import okta_policy_rule_signon.staff_signon <policyId>|<ruleId>
+```
+
 * When you are all done, you can destroy everything we worked so hard to create! Careful!
 
 ```sh

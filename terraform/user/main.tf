@@ -1,4 +1,5 @@
 resource okta_user user {
+  count             = "${var.enabled ? 1 : 0}"
   email             = "${var.email}"
   login             = "${var.login == "" ? var.email : var.login}"
   first_name        = "${var.first_name}"

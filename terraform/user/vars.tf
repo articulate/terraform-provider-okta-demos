@@ -13,6 +13,10 @@ variable "division" {
 
 variable "email" {}
 
+variable "enabled" {
+  default = true
+}
+
 variable "first_name" {}
 
 variable "groups" {
@@ -43,9 +47,9 @@ variable "title" {
 }
 
 output "email" {
-  value = "${okta_user.user.email}"
+  value = "${okta_user.user.*.email}"
 }
 
 output "id" {
-  value = "${okta_user.user.id}"
+  value = "${okta_user.user.*.id}"
 }
