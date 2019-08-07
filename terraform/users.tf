@@ -20,13 +20,6 @@ module john_doe {
   groups      = ["${okta_group.staff.id}"]
 }
 
-resource okta_user andy {
-  email      = "andygertjejansen@gmail.com"
-  login      = "andygertjejansen@gmail.com"
-  first_name = "Andy"
-  last_name  = "Gertjejansen"
-}
-
 resource okta_user_schema bio {
   index       = "bio"
   title       = "bio"
