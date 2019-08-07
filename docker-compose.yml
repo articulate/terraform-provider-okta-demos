@@ -6,5 +6,4 @@ services:
     env_file: .env
     volumes:
       - "./terraform:/terraform"
-      - "~/.terraform.d:/root/.terraform.d"
       - "~/.aws/credentials:/root/.aws/credentials"
